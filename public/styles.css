@@ -1,94 +1,100 @@
 * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html {
-          font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 body {
-          background-color: #17181f;
-          color: #ddd;
+  background-color: #17181f;
+  color: #ddd;
 }
 
 main {
-          max-width: 400px;
-          margin: 50px auto;
+  max-width: 400px;
+  margin: 50px auto;
 }
 
 h1 {
-          text-align: center;
-          color: #fff;
-          margin: 0;
+  text-align: center;
+  color: #fff;
+  margin: 0;
 }
 
 form {
-          margin-top: 30px;
+  margin-top: 30px;
 }
 
 form input {
-          width: 100%;
-          background-color: transparent;
-          color: #ddd;
-          border: 2px solid #30313d;
-          padding: 2px 5px;
-          border-radius: 5px;
+  width: 100%;
+  background-color: transparent;
+  color: #ddd;
+  border: 2px solid #30313d;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
 form input[type="datetime-local"] {
-          color: #777;
+  color: #777;
 }
 
 form div.basic {
-          display: flex;
-          gap: 5px;
-          margin-bottom: 5px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
 form button {
-          width: 100%;
-          margin-top: 5px;
-          border: none;
-          border-radius: 5px;
-          padding: 5px;
-          background-color: #ddd;
+  width: 100%;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: red;
+  color: #ddd;
 }
 
 div.transactions {
-          margin: 10px 0px 10px;
+  margin: 10px 0px 10px;
 }
 
 div.transaction {
-          display: flex;
-          justify-content: space-between;
-          padding: 5px 0;
-          border-top: 1px solid #30313d
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #30313d;
 }
 
 div.transaction:first-child {
-          border-top: none;
+  border-top: none;
 }
 
 div.transaction div.name {
-          font-size: 1rem;
+  font-size: 1rem;
 }
 div.transaction div.description {
-          font-size: .7rem;
-          color: #888;
+  font-size: 0.7rem;
+  color: #888;
 }
 
 div.right {
-          text-align: right;
+  text-align: right;
 }
 
 div.price.green {
-          color: green;
+  color: green;
 }
 div.price.red {
-          color: red;
+  color: red;
 }
 
 div.dateTime {
-          font-size: .7rem;
-          color: #888;
+  font-size: 0.7rem;
+  color: #888;
 }

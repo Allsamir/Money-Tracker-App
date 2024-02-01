@@ -3,7 +3,8 @@ import axios from "axios";
 
 const App = () => {
    const [transactionData,setTransactionData] = useState({
-      expence: "",
+      purchase: "",
+      price: "",
       date: "",
       description: ""
    });
@@ -30,22 +31,29 @@ return (
 <h1>$400<span>.00</span></h1>
 <form onSubmit={addNewTransaction}>
 
-<div className="basic">
+
+<div className="purchase">
 <input 
-name="expence"
+name="purchase"
 value={transactionData.expence}
 onChange={handleChange} 
-type="text" placeholder={"Your expences"} 
+type="text" placeholder={"Your Purchase"}
+required 
 />
+</div>
+
+<div className="basic">
+<input type="number" name="price" value={transactionData.price} onChange={handleChange} placeholder={"Price"} required/>
 <input 
 name="date"
 value={transactionData.date}
 onChange={handleChange}  
-type="datetime-local" 
+type="datetime-local"
+required 
 />
 </div>
 
-<div className="discription">
+<div className="dis">
 <input 
 name="description"
 value={transactionData.description}

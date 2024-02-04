@@ -72,6 +72,11 @@ const App = () => {
   }
 };
 
+const formateDate = (formDate) => {
+   const date = new Date(formDate);
+   return date.toLocaleDateString();
+}
+
    let balance = 0;
 
    for (const transaction of transactions) {
@@ -126,15 +131,15 @@ placeholder={"Description"}
 </form>
 <div className="transactions">
  <div>
-   {transactions.length > 0 && transactions.map(transaction => (
-   <div className="transaction">
+   {transactions.length > 0 && transactions.map((transaction, index) => (
+   <div className="transaction" id={index}>
    <div className="left">
    <div className="name">{transaction.purchase}</div>
    <div className="description">{transaction.description}</div>
    </div>
    <div className="right">
       <div className={"price " + (transaction.price > 0 ? 'green' : 'red') }>{transaction.price + "৳"}</div>
-      <div className="dateTime">{transaction.date}</div>
+      <div className="dateTime">{formateDate(transaction.date)}</div>
       <button type="button" onClick={() => deleteTransactionData(transaction._id)}><DeleteForeverIcon className="icon" /></button>
    </div>
    </div>   
